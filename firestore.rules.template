@@ -1,0 +1,69 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Only allow access if the user is signed in AND matches the owner email.
+    // OWNER_EMAIL is injected at deploy time from env — never commit the real value.
+    function isOwner() {
+      return request.auth != null && request.auth.token.email == "{{OWNER_EMAIL}}";
+    }
+
+    match /run_commands/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /runs/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /patterns/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /strategies/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /stock_metadata/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /cross_stock_rules/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /config_templates/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /app_config/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /scheduler_config/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /run_charts/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /backtest_trades/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /trade_log/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /trade_positions/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /trade_cycles/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /trade_daily/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /live_slot_trades/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /broker_account/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /broker_orders/{docId} {
+      allow read, write: if isOwner();
+    }
+    match /daily_reviews/{docId} {
+      allow read, write: if isOwner();
+    }
+  }
+}

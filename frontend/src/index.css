@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ─── */
+* { box-sizing: border-box; }
+body { margin: 0; background: #0d1117; color: #e6edf3; }
+
+/* ─── Scrollbar (dark theme) ─── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+/* ─── Custom utilities ─── */
+@layer components {
+  .card {
+    @apply bg-dark-card border border-dark-border rounded-lg p-5;
+  }
+  .card-hover {
+    @apply card transition-all duration-200 hover:border-accent-blue/40 hover:bg-dark-hover;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-accent-blue text-white font-medium rounded-lg
+           hover:bg-accent-blue/80 transition-colors duration-150
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-dark-hover border border-dark-border text-dark-text
+           font-medium rounded-lg hover:border-accent-blue/40 transition-colors duration-150;
+  }
+  .btn-danger {
+    @apply px-4 py-2 bg-accent-red/10 border border-accent-red/30 text-accent-red
+           font-medium rounded-lg hover:bg-accent-red/20 transition-colors duration-150;
+  }
+  .input {
+    @apply w-full px-3 py-2 bg-dark-bg border border-dark-border rounded-lg
+           text-dark-text placeholder-dark-muted focus:outline-none
+           focus:border-accent-blue/60 focus:ring-1 focus:ring-accent-blue/30
+           transition-colors duration-150;
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-green  { @apply badge bg-accent-green/15 text-accent-green; }
+  .badge-red    { @apply badge bg-accent-red/15 text-accent-red; }
+  .badge-blue   { @apply badge bg-accent-blue/15 text-accent-blue; }
+  .badge-yellow { @apply badge bg-accent-yellow/15 text-accent-yellow; }
+  .badge-muted  { @apply badge bg-dark-hover text-dark-muted; }
+}

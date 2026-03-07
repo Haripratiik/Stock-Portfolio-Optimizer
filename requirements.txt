@@ -1,0 +1,9 @@
+# Python dependencies for Portfolio Management V2
+# Install with: pip install -r requirements.txt
+
+lxml>=4.9.0
+yfinance>=0.2.0
+pandas>=1.5.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+firebase-admin>=6.0.0

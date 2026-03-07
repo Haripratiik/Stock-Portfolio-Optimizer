@@ -1,0 +1,50 @@
+# Secrets — never commit credentials
+.env
+.env.local
+.env.*.local
+firebase_service_account.json
+protfoliomanagerv2-firebase-adminsdk-fbsvc-9fbdf566d1.json
+*-firebase-adminsdk-*.json
+
+
+# Generated firestore.rules (contains owner email; use firestore.rules.template + script)
+firestore.rules
+
+# Build output (may contain inlined env vars)
+frontend/dist
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sentiment cache
+backend/sentiment_cache/
+*.pkl
+
+# Node
+node_modules/
+
+# Firebase CLI cache
+.firebase/
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
