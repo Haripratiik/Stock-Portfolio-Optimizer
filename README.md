@@ -265,8 +265,8 @@ Backtested Sharpe ratios across 6 full pipeline runs (5-year test window, 25-sto
 
 | Metric | Value |
 |---|---|
-| Mean Sharpe ratio | **6.54** |
-| Mean backtest return | +226% |
+| Mean Sharpe ratio | **0.84** |
+| Mean backtest return | +116% |
 | Win rate range | 54% – 77% |
 | S&P 500 Sharpe benchmark | ~0.40 – 0.60 |
 
