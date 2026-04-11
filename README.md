@@ -19,17 +19,44 @@ Stock Portfolio Optimizer is a fully automated, AI-driven trading pipeline that 
 
 ```mermaid
 flowchart TD
-    A[News APIs\nFinnhub · NewsAPI · AlphaVantage] --> B[Sentiment Analysis\n3-layer: Lexicon → Rule → GPT-4o-mini]
-    B --> C[Strategy Engine\nGPT-assisted cross-stock strategies]
-    C --> D[Stock ML Model + Portfolio ML Model\nscikit-learn · walk-forward validation]
-    D --> E[Trading Decider\nBlended signal reconciliation]
-    E --> F[Trading Bot\nAlpaca paper trade execution]
 
-    G[Genetic Algorithm\nPattern discovery] --> H[MCMC Simulator\nMonte Carlo validation]
+    subgraph TOP[" "]
+        direction LR
+
+        subgraph R["Signal Pipeline"]
+            direction TB
+            A["News APIs<br/>Finnhub · NewsAPI · AlphaVantage"]
+            B["Sentiment Analysis<br/>Lexicon · Rules · GPT-4o-mini"]
+            C["Strategy Engine<br/>Cross-stock strategies"]
+
+            A --> B
+            B --> C
+        end
+
+        subgraph M["Pattern Research"]
+            direction TB
+            G["Genetic Algorithm<br/>Pattern discovery"]
+            H["MCMC Simulator<br/>Monte Carlo validation"]
+
+            G --> H
+        end
+    end
+
+    D["Stock + Portfolio ML Models<br/>Walk-forward validated"]
+    E["Trading Decider<br/>Signal reconciliation"]
+    K["Dynamic Allocator<br/>Sizing · reweighting · ghost trades"]
+    F["Trading Bot<br/>Alpaca paper execution"]
+    I[("Firebase Firestore")]
+    J["React Dashboard<br/>Vite · Tailwind · Recharts"]
+
+    C --> D
     H --> D
-
-    F --> I[(Firebase Firestore\nPersistence)]
-    I --> J[React Dashboard\nVite · Tailwind · Recharts]
+    D --> E
+    E --> K
+    K --> F
+    F -.-> K
+    F --> I
+    I --> J
 ```
 
 ---
