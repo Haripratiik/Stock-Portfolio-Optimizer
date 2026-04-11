@@ -22,8 +22,8 @@ flowchart TD
     A[News APIs\nFinnhub · NewsAPI · AlphaVantage] --> B[Sentiment Analysis\n3-layer: Lexicon → Rule → GPT-4o-mini]
     B --> C[Strategy Engine\nGPT-assisted cross-stock strategies]
     C --> D[Stock ML Model + Portfolio ML Model\nscikit-learn · walk-forward validation]
-    D --> E[TradingDecider\nBlended signal reconciliation]
-    E --> F[TradingBot\nAlpaca paper trade execution]
+    D --> E[Trading Decider\nBlended signal reconciliation]
+    E --> F[Trading Bot\nAlpaca paper trade execution]
 
     G[Genetic Algorithm\nPattern discovery] --> H[MCMC Simulator\nMonte Carlo validation]
     H --> D
