@@ -1,0 +1,18 @@
+{
+  "submissionFolder": "C:\\VSCodeFolders\\PortfolioMangement_V2\\docs\\final_project\\portfolio_regime_stress_lab_submission",
+  "sourceRunId": "dfc04a9e8d78431e",
+  "sourceRunDir": "C:\\VSCodeFolders\\PortfolioMangement_V2\\docs\\final_project\\research_lab\\generated\\dfc04a9e8d78431e",
+  "briefDeliverables": [
+    "Jupyter Notebook (.ipynb)",
+    "Summary Analysis Report (PDF)",
+    "Presentation Slide (1 slide)"
+  ],
+  "selectedUniverse": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "META",
+    "NVDA"
+  ]
+}

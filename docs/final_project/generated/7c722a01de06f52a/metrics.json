@@ -1,0 +1,305 @@
+{
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "META",
+    "NVDA"
+  ],
+  "startDate": "2021-04-18",
+  "endDate": "2026-04-18",
+  "portfolioMethod": "equal_weight",
+  "regimeSummary": {
+    "Calm Expansion": {
+      "count": 135,
+      "pctOfSample": 10.505836575875486,
+      "avgStressScore": -0.10212408034583267,
+      "avgRealizedVol20d": 0.32254866943898763,
+      "avgCorr20d": 0.8727025989133788,
+      "avgBreadth": 0.8975308641975308
+    },
+    "Rotation / Transition": {
+      "count": 954,
+      "pctOfSample": 74.24124513618678,
+      "avgStressScore": -0.2324471901087799,
+      "avgRealizedVol20d": 0.09686693921709134,
+      "avgCorr20d": 0.20503971460658085,
+      "avgBreadth": 0.4853249475890986
+    },
+    "Stress Contagion": {
+      "count": 196,
+      "pctOfSample": 15.252918287937744,
+      "avgStressScore": 1.2816625739751073,
+      "avgRealizedVol20d": 0.3362660842319831,
+      "avgCorr20d": 0.8957176532476926,
+      "avgBreadth": 0.11054421768707484
+    }
+  },
+  "transitionMatrix": {
+    "counts": {
+      "Calm Expansion": {
+        "Calm Expansion": 121.0,
+        "Rotation / Transition": 2.0,
+        "Stress Contagion": 12.0
+      },
+      "Rotation / Transition": {
+        "Calm Expansion": 2.0,
+        "Rotation / Transition": 951.0,
+        "Stress Contagion": 1.0
+      },
+      "Stress Contagion": {
+        "Calm Expansion": 12.0,
+        "Rotation / Transition": 0.0,
+        "Stress Contagion": 183.0
+      }
+    },
+    "probabilities": {
+      "Calm Expansion": {
+        "Calm Expansion": 0.8963,
+        "Rotation / Transition": 0.0148,
+        "Stress Contagion": 0.0889
+      },
+      "Rotation / Transition": {
+        "Calm Expansion": 0.0021,
+        "Rotation / Transition": 0.9969,
+        "Stress Contagion": 0.001
+      },
+      "Stress Contagion": {
+        "Calm Expansion": 0.0615,
+        "Rotation / Transition": 0.0,
+        "Stress Contagion": 0.9385
+      }
+    }
+  },
+  "dwellStats": {
+    "Calm Expansion": {
+      "episodes": 14,
+      "avgDwellDays": 9.642857142857142,
+      "maxDwellDays": 38
+    },
+    "Rotation / Transition": {
+      "episodes": 3,
+      "avgDwellDays": 318.0,
+      "maxDwellDays": 821
+    },
+    "Stress Contagion": {
+      "episodes": 13,
+      "avgDwellDays": 15.076923076923077,
+      "maxDwellDays": 62
+    }
+  },
+  "forwardStatsByRegime": {
+    "Calm Expansion": {
+      "count": 135,
+      "avgForwardVol20d": 0.3248326070760759,
+      "medianForwardVol20d": 0.32711257815472156,
+      "avgForwardDrawdown20d": -0.09565084278292088,
+      "worstForwardDrawdown20d": -0.16853276835485242
+    },
+    "Rotation / Transition": {
+      "count": 954,
+      "avgForwardVol20d": 0.10021166388598748,
+      "medianForwardVol20d": 0.081445151704336,
+      "avgForwardDrawdown20d": -0.02916985918280691,
+      "worstForwardDrawdown20d": -0.1457835765598956
+    },
+    "Stress Contagion": {
+      "count": 176,
+      "avgForwardVol20d": 0.3195430175754685,
+      "medianForwardVol20d": 0.31345953676789695,
+      "avgForwardDrawdown20d": -0.08617253983137807,
+      "worstForwardDrawdown20d": -0.17871567374304398
+    }
+  },
+  "stressEntrySummary": {
+    "stressEntryCount": 13,
+    "preEntryRiseRatePct": 53.84615384615385,
+    "avgPre5StressScore": 0.3615396247554721,
+    "avgPrior5StressScore": 0.23925829771685153,
+    "entries": [
+      {
+        "entryDate": "2025-01-28",
+        "pre5Mean": 0.6687049582615414,
+        "prev5Mean": 0.18506327445088347,
+        "isRising": true
+      },
+      {
+        "entryDate": "2025-05-06",
+        "pre5Mean": 0.38513337739171005,
+        "prev5Mean": 1.263732704391241,
+        "isRising": false
+      },
+      {
+        "entryDate": "2025-05-08",
+        "pre5Mean": 0.21778814269752758,
+        "prev5Mean": 0.8426587869810674,
+        "isRising": false
+      },
+      {
+        "entryDate": "2025-05-22",
+        "pre5Mean": 0.7304619918084188,
+        "prev5Mean": 1.3481555569110157,
+        "isRising": false
+      },
+      {
+        "entryDate": "2025-07-08",
+        "pre5Mean": 0.7169159606334206,
+        "prev5Mean": 0.28013553126196794,
+        "isRising": true
+      },
+      {
+        "entryDate": "2025-07-14",
+        "pre5Mean": 0.9086703038838891,
+        "prev5Mean": 0.808738733141881,
+        "isRising": true
+      },
+      {
+        "entryDate": "2025-10-31",
+        "pre5Mean": -1.2397632619936185,
+        "prev5Mean": -1.1634063496027207,
+        "isRising": false
+      },
+      {
+        "entryDate": "2025-11-12",
+        "pre5Mean": 0.2804845737358347,
+        "prev5Mean": -0.9084651930671377,
+        "isRising": true
+      },
+      {
+        "entryDate": "2025-11-21",
+        "pre5Mean": 0.7882688124667476,
+        "prev5Mean": 0.7279651399058639,
+        "isRising": true
+      },
+      {
+        "entryDate": "2026-01-22",
+        "pre5Mean": -1.071039372816537,
+        "prev5Mean": -0.9881458783080262,
+        "isRising": false
+      },
+      {
+        "entryDate": "2026-02-02",
+        "pre5Mean": 0.9032755209257936,
+        "prev5Mean": -0.7452967863951723,
+        "isRising": true
+      },
+      {
+        "entryDate": "2026-02-23",
+        "pre5Mean": 1.3070855752202477,
+        "prev5Mean": 0.429772569855856,
+        "isRising": true
+      },
+      {
+        "entryDate": "2026-03-10",
+        "pre5Mean": 0.1040285396061618,
+        "prev5Mean": 1.02944978079235,
+        "isRising": false
+      }
+    ]
+  },
+  "leadLagSummary": [
+    {
+      "leader": "MSFT",
+      "follower": "NVDA",
+      "lagDays": 1,
+      "correlation": 0.08154119970082335,
+      "absCorrelation": 0.08154119970082335,
+      "confidence": 0.1630823994016467
+    },
+    {
+      "leader": "MSFT",
+      "follower": "GOOGL",
+      "lagDays": 1,
+      "correlation": 0.07738821373276505,
+      "absCorrelation": 0.07738821373276505,
+      "confidence": 0.1547764274655301
+    },
+    {
+      "leader": "MSFT",
+      "follower": "AAPL",
+      "lagDays": 1,
+      "correlation": 0.06838962016536866,
+      "absCorrelation": 0.06838962016536866,
+      "confidence": 0.13677924033073732
+    },
+    {
+      "leader": "AMZN",
+      "follower": "AAPL",
+      "lagDays": 1,
+      "correlation": 0.06615499969420528,
+      "absCorrelation": 0.06615499969420528,
+      "confidence": 0.13230999938841057
+    },
+    {
+      "leader": "NVDA",
+      "follower": "MSFT",
+      "lagDays": 4,
+      "correlation": 0.06575147834445047,
+      "absCorrelation": 0.06575147834445047,
+      "confidence": 0.13150295668890094
+    },
+    {
+      "leader": "GOOGL",
+      "follower": "AAPL",
+      "lagDays": 4,
+      "correlation": 0.06513405905028685,
+      "absCorrelation": 0.06513405905028685,
+      "confidence": 0.1302681181005737
+    },
+    {
+      "leader": "GOOGL",
+      "follower": "META",
+      "lagDays": 2,
+      "correlation": -0.06429177599808496,
+      "absCorrelation": 0.06429177599808496,
+      "confidence": 0.12858355199616991
+    },
+    {
+      "leader": "MSFT",
+      "follower": "AMZN",
+      "lagDays": 1,
+      "correlation": 0.06427130795925592,
+      "absCorrelation": 0.06427130795925592,
+      "confidence": 0.12854261591851185
+    },
+    {
+      "leader": "META",
+      "follower": "MSFT",
+      "lagDays": 4,
+      "correlation": 0.06343947825230455,
+      "absCorrelation": 0.06343947825230455,
+      "confidence": 0.1268789565046091
+    },
+    {
+      "leader": "GOOGL",
+      "follower": "NVDA",
+      "lagDays": 1,
+      "correlation": 0.06281657009881515,
+      "absCorrelation": 0.06281657009881515,
+      "confidence": 0.1256331401976303
+    }
+  ],
+  "forecast": {
+    "modelName": "ARIMA",
+    "modelOrder": [
+      1,
+      0,
+      1
+    ],
+    "modelStatus": "statsmodels_unavailable_baseline_used",
+    "mae": 0.01084425539041654,
+    "rmse": 0.01677338066420934,
+    "aic": null,
+    "bic": null,
+    "baselineMae": 0.01084425539041654,
+    "baselineRmse": 0.01677338066420934
+  },
+  "topInsights": [
+    "Stress Contagion carried an average realized vol of 33.63% versus 32.25% in Calm Expansion.",
+    "The Stress Propagation Score was higher in Stress Contagion (+1.28) than in Calm Expansion (-0.10).",
+    "Before stress-regime entries, the score rose in 53.8% of observed transitions.",
+    "The strongest lead-lag relation was MSFT leading NVDA by 1 day(s) (corr=+0.08).",
+    "ARIMA forecasting fell back to baseline mode (statsmodels_unavailable_baseline_used); install statsmodels to enable the full model path."
+  ]
+}
