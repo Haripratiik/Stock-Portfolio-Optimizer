@@ -11,7 +11,7 @@
 
 ## What is this?
 
-Stock Portfolio Optimizer is a fully automated, AI-driven trading pipeline that runs end-to-end — from fetching live news and analysing sentiment, to discovering candlestick patterns via a genetic algorithm, training ML models, making buy/sell decisions, and executing paper trades through Alpaca. A real-time React dashboard synced to Firebase Firestore gives you live visibility into every trade, pattern, strategy, and portfolio metric.
+Stock Portfolio Optimizer is a fully automated, AI-driven trading pipeline that runs end-to-end, from fetching live news and analysing sentiment, to discovering candlestick patterns via a genetic algorithm, training ML models, making buy/sell decisions, and executing paper trades through Alpaca. A real-time React dashboard synced to Firebase Firestore gives you live visibility into every trade, pattern, strategy, and portfolio metric.
 
 ---
 
@@ -64,28 +64,28 @@ flowchart TD
 ## Features
 
 ### AI & Machine Learning
-- **3-Layer Sentiment Engine** — lexicon scoring → rule-based NLP → GPT-4o-mini deep analysis
-- **Genetic Algorithm** — discovers candlestick patterns on training data with zero look-ahead bias
-- **Monte Carlo / MCMC Simulation** — validates patterns over 1,000 simulated paths before they trade
-- **Per-stock ML Model** — scikit-learn gradient boosting for price direction prediction
-- **Portfolio ML Model** — regime classification (low / normal / high / crisis) across the whole portfolio
-- **Walk-Forward Validation** — rolling train/test splits to prevent overfitting
-- **Pattern Refinement** — iterative ML-guided mutation of GA patterns for higher MC composite scores
+- **3-Layer Sentiment Engine**: lexicon scoring → rule-based NLP → GPT-4o-mini deep analysis
+- **Genetic Algorithm**: discovers candlestick patterns on training data with zero look-ahead bias
+- **Monte Carlo / MCMC Simulation**: validates patterns over 1,000 simulated paths before they trade
+- **Per-stock ML Model**: scikit-learn gradient boosting for price direction prediction
+- **Portfolio ML Model**: regime classification (low / normal / high / crisis) across the whole portfolio
+- **Walk-Forward Validation**: rolling train/test splits to prevent overfitting
+- **Pattern Refinement**: iterative ML-guided mutation of GA patterns for higher MC composite scores
 
 ### Trading & Risk
-- **Alpaca Paper Trading** — full order execution with market/limit orders via `alpaca-py`
-- **Dynamic Fund Allocator** — risk-adjusted slot allocation with ghost mode for underperforming patterns
-- **Earnings Blackout** — automatically suppresses trades around earnings dates
-- **Stop-Loss & Drawdown Circuit Breaker** — per-trade and portfolio-level protection
-- **Connected Stock Manager** — inter-stock correlation tracking for hedge and pairs strategies
-- **Alert Manager** — email notifications for significant portfolio events
+- **Alpaca Paper Trading**: full order execution with market/limit orders via `alpaca-py`
+- **Dynamic Fund Allocator**: risk-adjusted slot allocation with ghost mode for underperforming patterns
+- **Earnings Blackout**: automatically suppresses trades around earnings dates
+- **Stop-Loss & Drawdown Circuit Breaker**: per-trade and portfolio-level protection
+- **Connected Stock Manager**: inter-stock correlation tracking for hedge and pairs strategies
+- **Alert Manager**: email notifications for significant portfolio events
 
 ### Frontend Dashboard
-- **Real-time Firestore sync** — every trade, run, and pattern updates live
-- **Pages** — Dashboard · Portfolio · Trading · Charts · Strategies · Trades · Queue · Patterns · Run Pipeline · Settings
-- **Candlestick Pattern Viewer** — visual inspection of every discovered GA pattern
-- **Stock Mini-Charts & Compare Charts** — lightweight-charts powered visualisations
-- **Google Sign-In** — owner-only access enforced at Firestore rules level
+- **Real-time Firestore sync**: every trade, run, and pattern updates live
+- **Pages**: Dashboard · Portfolio · Trading · Charts · Strategies · Trades · Queue · Patterns · Run Pipeline · Settings
+- **Candlestick Pattern Viewer**: visual inspection of every discovered GA pattern
+- **Stock Mini-Charts & Compare Charts**: lightweight-charts powered visualisations
+- **Google Sign-In**: owner-only access enforced at Firestore rules level
 
 ### Infrastructure
 - Firebase Firestore for all persistence
@@ -93,7 +93,7 @@ flowchart TD
 - Firebase Auth (Google) for authentication
 - Cloud Functions (Node.js) for Firebase helpers
 - Cron-based scheduled runs via `SchedulerCron.py`
-- All secrets managed via `.env` — never committed
+- All secrets managed via `.env`, never committed
 
 ---
 
@@ -102,7 +102,7 @@ flowchart TD
 ```
 Stock-Portfolio-Optimizer/
 ├── backend/
-│   ├── LocalAgent.py          # Main GUI agent — orchestrates the full pipeline
+│   ├── LocalAgent.py          # Main GUI agent, orchestrates the full pipeline
 │   ├── TradingBot.py          # Alpaca trade execution
 │   ├── TradingDecider.py      # Blended signal decision engine
 │   ├── SentimentAnalysis.py   # 3-layer sentiment pipeline
@@ -150,11 +150,11 @@ Stock-Portfolio-Optimizer/
 | Python | 3.10+ | 3.13 recommended |
 | Node.js | 18+ | For frontend + Firebase CLI |
 | Firebase CLI | latest | `npm install -g firebase-tools` |
-| Alpaca account | — | Free paper trading at alpaca.markets |
-| OpenAI API key | — | For GPT-4o-mini sentiment layer |
-| Finnhub API key | — | Free tier sufficient |
-| NewsAPI key | — | Free tier (30-day history) |
-| Alpha Vantage key | — | Free tier |
+| Alpaca account | n/a | Free paper trading at alpaca.markets |
+| OpenAI API key | n/a | For GPT-4o-mini sentiment layer |
+| Finnhub API key | n/a | Free tier sufficient |
+| NewsAPI key | n/a | Free tier (30-day history) |
+| Alpha Vantage key | n/a | Free tier |
 
 ---
 
@@ -187,7 +187,7 @@ Open `.env` and fill in all API keys (see [Environment Variables](#environment-v
 1. Create a project at https://console.firebase.google.com
 2. Enable **Firestore** and **Authentication → Google Sign-In**
 3. Go to **Project Settings → Service Accounts → Generate New Private Key**
-4. Save the JSON file in the project root (filename can be anything — set `FIREBASE_SERVICE_ACCOUNT_PATH` in `.env`)
+4. Save the JSON file in the project root (filename can be anything, set `FIREBASE_SERVICE_ACCOUNT_PATH` in `.env`)
 5. Generate Firestore security rules:
    ```bash
    node scripts/generate-firestore-rules.js
@@ -208,7 +208,7 @@ npm run dev                 # development server at http://localhost:5173
 
 ### Full pipeline (GUI agent)
 ```bash
-# Windows — double-click or:
+# Windows: double-click or:
 RunAgent.bat
 
 # Or directly:
@@ -248,7 +248,7 @@ Copy `.env.example` → `.env` and fill in your values.
 | `ALPHAVANTAGE_KEY` | Pre-scored sentiment data | alphavantage.co |
 | `ALPACA_API_KEY` | Paper trading | app.alpaca.markets |
 | `ALPACA_SECRET_KEY` | Paper trading | app.alpaca.markets |
-| `ALPACA_BASE_URL` | `https://paper-api.alpaca.markets` | — |
+| `ALPACA_BASE_URL` | `https://paper-api.alpaca.markets` | n/a |
 | `OWNER_EMAIL` | Only this email can access the dashboard | Your Google email |
 | `FIREBASE_SERVICE_ACCOUNT_PATH` | Path to downloaded JSON key file | Firebase Console → Service Accounts |
 | `VITE_FIREBASE_API_KEY` | Firebase Web SDK | Firebase Console → Project Settings → Your apps |
@@ -264,7 +264,7 @@ Copy `.env.example` → `.env` and fill in your values.
 
 - `.env`, `firestore.rules`, and all Firebase service account JSON files are **git-ignored** and will never be committed
 - Firestore rules enforce owner-only access at the database level
-- The `firestore.rules.template` (safe to commit) uses a `{{OWNER_EMAIL}}` placeholder — the real address is injected at deploy time
+- The `firestore.rules.template` (safe to commit) uses a `{{OWNER_EMAIL}}` placeholder, the real address is injected at deploy time
 - See [SECURITY.md](SECURITY.md) for full details
 
 ---
